@@ -1,0 +1,99 @@
+*{
+    background: #303139;
+    topBar: #393a42;
+    hover: #545462;
+    pinkish: #F75590;
+}
+.background{
+    -fx-background-color: background;
+}
+
+.topBar{
+    -fx-background-color: topBar;
+}
+
+.closeButton{
+    -fx-background-color: background;
+}
+
+.closeButton:hover{
+    -fx-background-color: pinkish;
+}
+
+.button1{
+    -fx-background-color: topBar;
+    -fx-text-fill: #ffffff;
+}
+
+.button1:hover{
+    -fx-background-color: hover;
+}
+
+.text1{
+    -fx-fill: white;
+}
+
+.tab-header-area .tab-header-background {
+    -fx-background-color: background;
+}
+
+.tab-label {
+    -fx-text-fill: white;
+}
+
+.tab{
+    -fx-background-color: topBar;
+    -fx-background: topBar;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.tab:hover{
+    -fx-background-color: hover;
+    -fx-background: hover;
+}
+
+.tab:selected{
+    -fx-background-color: pinkish;
+    -fx-background: pinkish;
+}
+
+.choice-box{
+    -fx-background-color: topBar;
+    -fx-background: topBar;
+    -fx-text: white;
+}
+
+.choice-box:hover{
+    -fx-background-color: hover;
+    -fx-background: hover;
+}
+
+.choice-box .context-menu { -fx-background-color: topBar;}
+
+.choice-box .menu-item:focused { -fx-background-color: pinkish; }
+
+.choice-box .menu-item > .label { -fx-text-fill: white; }
+
+.choice-box .menu-item:focused > .label { -fx-text-fill: white; }
+
+.choice-box > .label { -fx-text-fill: white; }
+
+.text-field{
+    -fx-background-color: topBar;
+    -fx-background: topBar;
+    -fx-text-fill: white;
+    -fx-accent: pinkish ;
+}
+
+.text-area{
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-accent: pinkish;
+}
+
+.list-view{
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-accent: pinkish;
+}

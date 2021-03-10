@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@CSS.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TabPane layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="800.0" side="LEFT" styleClass="background" stylesheets="@CSS.css" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Video Ideas">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="580.0" prefWidth="771.0">
+                     <children>
+                        <ListView fx:id="videoIdeaList" editable="true" layoutX="63.0" layoutY="129.0" prefHeight="375.0" prefWidth="498.0" />
+                        <ChoiceBox fx:id="topicChoiceBox" layoutX="63.0" layoutY="54.0" prefHeight="38.0" prefWidth="179.0" />
+                        <Button layoutX="695.0" layoutY="517.0" mnemonicParsing="false" onMouseClicked="#findNewFile" styleClass="button1" text="New File" />
+                        <VBox layoutX="599.0" layoutY="129.0" prefHeight="388.0" prefWidth="100.0" spacing="15.0">
+                           <children>
+                              <Button mnemonicParsing="false" onMouseClicked="#saveVideoIdeas" prefHeight="75.0" prefWidth="100.0" styleClass="button1" stylesheets="@CSS.css" text="Save" />
+                              <Button mnemonicParsing="false" onMouseClicked="#removeVideoIdea" prefHeight="75.0" prefWidth="100.0" styleClass="button1" stylesheets="@CSS.css" text="Remove" />
+                              <Button layoutX="10.0" layoutY="190.0" mnemonicParsing="false" onMouseClicked="#addToTodaysWork" prefHeight="75.0" prefWidth="100.0" styleClass="button1" text="Today's Work" />
+                           </children>
+                        </VBox>
+                        <Text fill="WHITE" layoutX="63.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text1" text="Topic">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Add Video Idea">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="newVideoIdea" layoutX="314.0" layoutY="96.0" prefHeight="37.0" prefWidth="363.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Text fill="WHITE" layoutX="73.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text1" text="Topic">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="321.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text1" text="Video Idea">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <ChoiceBox fx:id="topicChoiceBox1" layoutX="73.0" layoutY="96.0" prefHeight="38.0" prefWidth="179.0" />
+                        <Button layoutX="392.0" layoutY="173.0" mnemonicParsing="false" onMouseClicked="#addNewVideoIdea" prefHeight="91.0" prefWidth="207.0" styleClass="button1" text="Add video Idea" />
+                        <TextField fx:id="newTopic" layoutX="314.0" layoutY="381.0" prefHeight="37.0" prefWidth="363.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Button layoutX="74.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#addNewTopic" prefHeight="78.0" prefWidth="178.0" styleClass="button1" text="Add topic" />
+                        <Button layoutX="98.0" layoutY="185.0" mnemonicParsing="false" onMouseClicked="#deleteTopic" prefHeight="69.0" prefWidth="131.0" styleClass="button1" text="Delete Topic" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Todays Work">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea layoutX="137.0" layoutY="73.0" prefHeight="239.0" prefWidth="526.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextArea>
+                        <Text layoutX="346.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text1" text="Notes">
+                           <font>
+                              <Font size="41.0" />
+                           </font>
+                        </Text>
+                        <ListView fx:id="listViewTodaysIdeas" layoutX="218.0" layoutY="370.0" prefHeight="90.0" prefWidth="365.0" />
+                        <Text layoutX="279.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text1" text="Todays video ideas:">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="457.0" layoutY="480.0" mnemonicParsing="false" onMouseClicked="#completedVideoIdea" styleClass="button1" text="Completed">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="218.0" layoutY="480.0" mnemonicParsing="false" onMouseClicked="#notToday" styleClass="button1" text="Not Today">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <HBox alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="800.0" styleClass="topBar" stylesheets="@CSS.css">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#close" prefHeight="35.0" prefWidth="35.0" styleClass="closeButton" stylesheets="@CSS.css" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>
